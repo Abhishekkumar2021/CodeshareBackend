@@ -42,9 +42,9 @@ mongoose
 app.get('/',(req,res)=>{
   res.json({message:"Routes starts at /api/posts/"});
 })
-app.use('*',(req,res)=>{
+app.use("/api/posts", routes);
+
+app.get('*',(req,res)=>{
   res.json({message:"No such route exist!"});
 })
-
-app.get({message})
 
