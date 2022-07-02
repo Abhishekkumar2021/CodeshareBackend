@@ -15,10 +15,10 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use((req,res,next)=>{
-  console.log(req.method);
-  next();
-})
+// app.use((req,res,next)=>{
+//   console.log(req.method);
+//   next();
+// })
 
 
 const port = process.env.PORT || 3000
@@ -31,7 +31,7 @@ mongoose
   .then(() => {
     //listen for requests only after we have connected to database
     app.listen(port, () => {
-      console.log("Connected to db & Running on PORT " + port);
+      // console.log("Connected to db & Running on PORT " + port);
     });
   })
   .catch((error) => {
