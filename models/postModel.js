@@ -26,6 +26,10 @@ const postSchema = new Schema({
     upvotes:{
         type:Number,
         default:0
+    },
+    email:{
+        type:String,
+        default:"Codeshare@mail.com"
     }
    
 },{timestamps:true});

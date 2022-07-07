@@ -4,19 +4,22 @@ const router = express.Router();
 //import controllers
 const controllers = require('../controllers/postController')
 
-// GET all workouts
+// GET all post
 router.get('/',controllers.getAllPosts)
 
-//GET a single workout
+// GET all post for an user
+router.get('/mail/:email',controllers.getAllPostsUser)
+
+//GET a single post
 router.get('/:id',controllers.getPost)
 
-// POST a new workout
+// POST a new post
 router.post('/',controllers.createPost)
 
-// DELETE a workout
-router.delete('/:id',controllers.deletePost)
+// DELETE a post
+router.delete('/:id/:email',controllers.deletePost)
 
-// UPDATE a workout
+// UPDATE a post
 router.patch('/:id',controllers.updatePost)
 
 module.exports = router;
