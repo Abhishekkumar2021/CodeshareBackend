@@ -4,7 +4,8 @@ const private = require("../controllers/privateController")
 const protect  = require("../middlewares/auth")
 
 
-// accesing the user
+// accessing the user
+// route -> GET /api/private/
 router.get('/', protect, private)
 
 module.exports = router

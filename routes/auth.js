@@ -6,6 +6,7 @@ const router = express.Router();
 const controllers = require('../controllers/userController')
 
 // Register the user
+// POST /api/user/register
 router.post('/register',controllers.register)
 
  //  Login the user

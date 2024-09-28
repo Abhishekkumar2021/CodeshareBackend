@@ -1,7 +1,7 @@
 const ErrorResponse = require("../utils/ErrorResponse")
 
 const errorHandler = (err,req,res,next)=>{
-    const error = {...err};
+    let error = {...err};
     error.message = err.message
 
     if(error.name==="ValidationError"){
